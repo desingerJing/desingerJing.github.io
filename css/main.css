@@ -248,7 +248,7 @@ header .cart-wrap {
 
 .aside li > a {
   display: block;
-  font-style: 24px;
+  font-size: 24px;
   font-weight: 500;
   color: #3F5D45;
   padding: 15px;
@@ -393,12 +393,12 @@ header .cart-wrap {
 }
 
 .pagination-item.pagination-prev a::before {
-  border-width: 3px 6px 3px 0;
+  border-width: 4px 6px 4px 0;
   border-color: transparent #3f5d45 transparent transparent;
 }
 
 .pagination-item.pagination-next a::before {
-  border-width: 3px 0 3px 6px;
+  border-width: 4px 0 4px 6px;
   border-color: transparent transparent transparent #3f5d45;
 }
 
@@ -561,6 +561,7 @@ header .cart-wrap {
   display: block;
   width: 30px;
   text-align: center;
+  line-height: 1.2em;
   position: relative;
 }
 
@@ -575,6 +576,10 @@ header .cart-wrap {
   height: 48px;
   background-color: #3F5D45;
   margin: 5px auto 0;
+}
+
+.footer-solgan span:last-child {
+  padding-top: 15px;
 }
 
 .sub-footer {
