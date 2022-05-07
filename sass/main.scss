@@ -40,7 +40,7 @@ header {
             font-size: 16px;
             font-weight: 500;
             color: #3F5D45;
-            padding: 5px 30px;
+            padding: 10px 30px;
             text-decoration: none;
             transition: ease .2s;
             &:hover {
@@ -151,6 +151,7 @@ header {
 }
 
 .product-title {
+    flex-grow: 1;
     font-size: 20px;
     font-weight: lighter;
 
@@ -179,6 +180,7 @@ header {
         color: #3F5D45;
         font-size: 24px;
         font-weight: 500;
+        line-height: 1.2em;
         text-decoration: none;
         padding: 16px;
     }
