@@ -37,7 +37,6 @@ header {
         
         a {
             display: block;
-            font-size: 16px;
             font-weight: 500;
             color: #3F5D45;
             padding: 10px 30px;
@@ -75,6 +74,7 @@ header {
 .aside-header {
     font-size: 24px;
     font-weight: 500;
+    line-height: 1.375em;
     color: #EAF0ED;
     text-align: center;
     padding: 16px;
@@ -85,7 +85,8 @@ header {
     text-align: center;
     li {
 
-        &.active {
+        &.active,
+        &:hover {
             
             a {
                 background-color: #EAF0ED;
@@ -100,6 +101,7 @@ header {
             border: 1px solid #EAF0ED;
             border-top: 0;
             text-decoration: none;
+            transition: ease .5s;
         }
     }
 }
@@ -127,7 +129,6 @@ header {
 .daily-hot {
     width: 36px;
     color: #EAF0ED;
-    font-size: 16px;
     position: absolute;
     top: 0;
     left: 20px;
@@ -160,6 +161,10 @@ header {
         color: #3F5D45;
         padding: 14px 30px;
         text-decoration: none;
+        transition: ease .5s;
+        &:hover {
+            text-shadow: 0 0 0 #3F5D45;
+        }
     }
 }
 
@@ -183,6 +188,11 @@ header {
         line-height: 1.2em;
         text-decoration: none;
         padding: 16px;
+        transition: ease .5s;
+        &:hover {
+            color: #fff;
+            background-color: #3F5D45;
+        }
     }
 }
 
@@ -205,11 +215,14 @@ header {
 
     a {
         display: block;
+        width: 60px;
         color: #3F5D45;
         font-size: 20px;
         font-weight: lighter;
         text-decoration: none;
-        padding: 16px 26px;
+        padding: 20px 26px;
+        background-color: #fff;
+        transition: background-color ease .2s;
     }
 
     &.pagination-prev,
@@ -237,16 +250,23 @@ header {
         border-width: 4px 6px 4px 0;
         border-color: transparent #3f5d45 transparent transparent;
     }
+    &.pagination-prev:hover a::before {
+        border-color: transparent #fff transparent transparent;
+    }
 
     &.pagination-next a::before {
         border-width: 4px 0 4px 6px;
         border-color: transparent transparent transparent #3f5d45;
     }
+    &.pagination-next:hover a::before {
+        border-color: transparent transparent transparent #fff;
+    }
 
-    &.pagination-active {
-        background-color: #3F5D45;
+    &.pagination-active,
+    &:hover {
         a {
             color: #EAF0ED ;
+            background-color: #3F5D45;
         }
     }
 }
@@ -334,7 +354,6 @@ header {
 }
 
 .footer-info {
-    font-size: 16px;
     line-height: 1.4em;
     color: #3F5D45;
     a {
@@ -408,6 +427,9 @@ header {
 
 .footer-copyright {
     color: #3F5D45;
-    font-size: 16px;
     font-family: 'Times New Roman', Times, "Noto Sans TC", "微軟正黑體", Arial, \5FAE\8EDF\6B63\9ED1\9AD4,"Microsoft JhengHei","微软雅黑","メイリオ", "맑은 고딕",sans-serif;;
+}
+
+.d-none {
+    display: none;
 }

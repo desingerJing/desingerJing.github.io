@@ -187,7 +187,6 @@ header .main-menu {
 
 header .main-menu a {
   display: block;
-  font-size: 16px;
   font-weight: 500;
   color: #3F5D45;
   padding: 10px 30px;
@@ -232,6 +231,7 @@ header .cart-wrap {
 .aside-header {
   font-size: 24px;
   font-weight: 500;
+  line-height: 1.375em;
   color: #EAF0ED;
   text-align: center;
   padding: 16px;
@@ -242,7 +242,7 @@ header .cart-wrap {
   text-align: center;
 }
 
-.aside li.active a {
+.aside li.active a, .aside li:hover a {
   background-color: #EAF0ED;
 }
 
@@ -255,6 +255,8 @@ header .cart-wrap {
   border: 1px solid #EAF0ED;
   border-top: 0;
   text-decoration: none;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
 }
 
 .main-content {
@@ -283,7 +285,6 @@ header .cart-wrap {
 .daily-hot {
   width: 36px;
   color: #EAF0ED;
-  font-size: 16px;
   position: absolute;
   top: 0;
   left: 20px;
@@ -323,6 +324,12 @@ header .cart-wrap {
   color: #3F5D45;
   padding: 14px 30px;
   text-decoration: none;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
+}
+
+.product-title a:hover {
+  text-shadow: 0 0 0 #3F5D45;
 }
 
 .product-price {
@@ -346,6 +353,13 @@ header .cart-wrap {
   line-height: 1.2em;
   text-decoration: none;
   padding: 16px;
+  -webkit-transition: ease .5s;
+  transition: ease .5s;
+}
+
+.btn-wrap a:hover {
+  color: #fff;
+  background-color: #3F5D45;
 }
 
 .pagination-wrap {
@@ -371,11 +385,15 @@ header .cart-wrap {
 
 .pagination-item a {
   display: block;
+  width: 60px;
   color: #3F5D45;
   font-size: 20px;
   font-weight: lighter;
   text-decoration: none;
-  padding: 16px 26px;
+  padding: 20px 26px;
+  background-color: #fff;
+  -webkit-transition: background-color ease .2s;
+  transition: background-color ease .2s;
 }
 
 .pagination-item.pagination-prev a, .pagination-item.pagination-next a {
@@ -401,17 +419,22 @@ header .cart-wrap {
   border-color: transparent #3f5d45 transparent transparent;
 }
 
+.pagination-item.pagination-prev:hover a::before {
+  border-color: transparent #fff transparent transparent;
+}
+
 .pagination-item.pagination-next a::before {
   border-width: 4px 0 4px 6px;
   border-color: transparent transparent transparent #3f5d45;
 }
 
-.pagination-item.pagination-active {
-  background-color: #3F5D45;
+.pagination-item.pagination-next:hover a::before {
+  border-color: transparent transparent transparent #fff;
 }
 
-.pagination-item.pagination-active a {
+.pagination-item.pagination-active a, .pagination-item:hover a {
   color: #EAF0ED;
+  background-color: #3F5D45;
 }
 
 .footer-mailgun-wrap {
@@ -526,7 +549,6 @@ header .cart-wrap {
 }
 
 .footer-info {
-  font-size: 16px;
   line-height: 1.4em;
   color: #3F5D45;
 }
@@ -619,6 +641,9 @@ header .cart-wrap {
 
 .footer-copyright {
   color: #3F5D45;
-  font-size: 16px;
   font-family: 'Times New Roman', Times, "Noto Sans TC", "微軟正黑體", Arial, \5FAE\8EDF\6B63\9ED1\9AD4,"Microsoft JhengHei","微软雅黑","メイリオ", "맑은 고딕",sans-serif;
+}
+
+.d-none {
+  display: none;
 }
